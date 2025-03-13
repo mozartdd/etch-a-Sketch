@@ -1,12 +1,50 @@
+* {
+    box-sizing: border-box;
+    background-color: tomato;
+}
+
+body {
+    height: 100vh;
+    overflow: hidden;
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 2em;
+}
+
+h1 {
+    margin-top: 100px;
+    margin-bottom: 0;
+    font-size: 2em;
+}
+
+input {
+    width: 10%;
+    text-align: center;
+    font-size: 32px;
+    margin-top: 15px;
+}
+
+button {
+    width: 5%;
+    position: relative;
+    bottom: 7px;
+    font-size: 20px;
+}
+
+input, button {
+    background-color: white;
+    border-radius: 15px;
+    height: 40px;
+}
+
+
 .container {
     display: flex;
-    gap: 2px;
-    flex-wrap: wrap;
     margin: auto;
-    height: 500px;
-    width: 570px;
-    position: relative;
-    top: 100px;
+    height: 760px;
+    width: 760px;
+    border: solid 2px black;
+    flex-wrap: wrap;
 }
 
 .on-hover {

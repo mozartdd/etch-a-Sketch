@@ -1,14 +1,28 @@
 const container = document.querySelector('.container');
-let squareField = 16 * 16;
+const input = document.querySelector('input');
+const button = document.querySelector('button');
 
-for (let i = 1; i <= squareField; i++) {
+let sizeOfGrid = 3;
+
+// button.addEventListener('click', () => {
+//     sizeOfGrid = input.value;
+// });
+
+
+
+//LOOP TO CREATE DIV SQUARES EQUAL TO sizeOfGrid VARIABLE COUNT
+for (let i = 1; i <= sizeOfGrid * sizeOfGrid; i++) {
     const div = document.createElement('div');
     container.appendChild(div);
-    div.style.border = 'solid, 1px, black'
-    div.style.width = '30px';
-    div.style.height = '30px';
 
+//DIV STYLING PART
+    div.style.flex = '1 1 0'
+    div.style.border = 'solid, 1px, black'
+    div.style.backgroundColor = 'white'
+
+//EVENT LISTENER TO CHANGE COLOR IF MOUSE IS OVER DIV
     div.addEventListener('mouseover' , () => {
+        div.style.backgroundColor = ''
         div.classList.add('on-hover');
     })
 
