@@ -2,11 +2,12 @@ const container = document.querySelector('.container');
 const input = document.querySelector('input');
 const button = document.querySelector('button');
 
-let sizeOfGrid = 6;
 
-// button.addEventListener('click', () => {
-//     sizeOfGrid = input.value;
-// });
+let sizeOfGrid = returnSizeOfGrid();
+
+button.addEventListener('click', () => {
+    return sizeOfGrid = prompt('Enter number between 1 and 100, it will set the size of grid squares', '5');
+});
 
 //LOOP TO CREATE DIV SQUARES EQUAL TO sizeOfGrid VARIABLE COUNT
 for (let i = 1; i <= sizeOfGrid * sizeOfGrid; i++) {
@@ -14,7 +15,6 @@ for (let i = 1; i <= sizeOfGrid * sizeOfGrid; i++) {
     container.appendChild(div);
 
 //DIV STYLING PART
-    // div.style.flex = 'auto';
     div.style.border = 'solid, 1px, black';
     div.style.backgroundColor = 'white';
     div.style.width = `${100 / sizeOfGrid}%`;
@@ -25,4 +25,8 @@ for (let i = 1; i <= sizeOfGrid * sizeOfGrid; i++) {
         div.style.backgroundColor = ''
         div.classList.add('on-hover');
     })
+};
+
+function returnSizeOfGrid() {
+    return prompt('Enter number between 1 and 100, it will set the size of grid squares', '5');
 };
