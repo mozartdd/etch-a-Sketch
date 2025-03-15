@@ -28,7 +28,16 @@ function resizeGrid(sizeOfGrid){
 
 //FUNCTION TO ASK FOR USER INPUT TO CHOSE SQUARE AMOUNT
 function askForSize() {
-    return +prompt('Enter the size of grid', '16'); 
+    if(!input.value) {
+        input.value = 16;
+    }
+    if(input.value > 100 ) {
+        input.value = 100;
+    }
+    if(input.value <= 0) {
+        input.value = 1;
+    }
+    return input.value;
 }
 
 //CALL FOR INITIAL SKETCH GRID PANEL
