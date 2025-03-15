@@ -10,6 +10,7 @@ function resizeGrid(sizeOfGrid){
 //LOOP TO CREATE DIV SQUARES EQUAL TO sizeOfGrid VARIABLE COUNT
     for (let i = 1; i <= sizeOfGrid * sizeOfGrid; i++) {
         const div = document.createElement('div');
+        // const arrayOfDivs = document.querySelectorAll('div');
         container.appendChild(div);
     
     //DIV STYLING PART
@@ -18,7 +19,8 @@ function resizeGrid(sizeOfGrid){
         div.style.width = `${100 / sizeOfGrid}%`;
         div.style.height = `${100 / sizeOfGrid}%`;
     
-    //EVENT LISTENER TO CHANGE COLOR IF MOUSE IS OVER DIV     
+    //EVENT LISTENER TO CHANGE COLOR IF MOUSE IS OVER DIV
+        
     div.addEventListener('mouseenter', () => {
         // div.style.backgroundColor = '';
         div.style.backgroundColor = `rgb(${returnRandomRGB()}, ${returnRandomRGB()}, ${returnRandomRGB()})`});
@@ -26,7 +28,6 @@ function resizeGrid(sizeOfGrid){
 }
 }
 
-//FUNCTION THAT RETURNS RANDOM NUM FOR RGB COLOR 
 function returnRandomRGB() {
     return Math.floor((Math.random() * 255) + 1)
 };
