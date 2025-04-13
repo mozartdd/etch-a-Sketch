@@ -1,1 +1,1 @@
-![Preview](https://mozartdd.github.io/etch-a-Sketch/)
+![Preview](etch-a-skech.png)
